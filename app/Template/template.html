@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Product</title>
+		<link rel="stylesheet" href="global.css">
+		<style>
+			*{
+				margin: 0; 
+				outline: none;
+				border: none;
+			}
+		  .menu{
+			background-color: rgb(54, 55, 84);
+			padding: 3vh;
+		  }
+		  .menu a {
+			text-decoration: none;
+			color: rgb(255, 255, 255);
+			padding: 5px;
+		  }
+		  .Button-hover::hover {
+              background-color: rgb(92, 155, 60);
+		  }
+
+          .screen-full{
+             width: 100%;
+			 background-color: rgb(218, 220, 222);
+			 display: flex;
+			 align-items: center;
+			 justify-content: center;
+			 
+		  }
+ 
+		  /* HOME  CARD*/
+
+		  .search{
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			margin-top: 5vh;
+		  }
+
+		  .search input{
+			width: 35vh;
+			height: 4vh;
+			border: none;
+			border-radius: 8px;
+		  }
+		  .search button{
+			font-family: cursive;
+			background-color: rgb(81, 147, 125);
+			padding: 7px;
+			text-align: center;
+			color: white;
+			font-weight: 400;
+			border-radius: 10px;
+			cursor: pointer;
+
+		  }
+		  .grid-sistem{
+			margin-top: 8vh;
+			width: 100%;
+			height: 100vh;
+			display: grid;
+			grid-template-columns: auto auto auto auto;
+			gap: 25px;
+			overflow-y: scroll;
+			padding: 5vh;
+		  }
+		  .card{
+			background-color: white;
+			box-shadow: 0px 15px 20px 0px rgb(100, 100, 100);
+			width: 30vh;
+			height: 30vh;
+			border-radius: 5px;	
+			padding: 5px;	
+			position: relative;
+		  }
+
+		  .card h2{
+			font-family: cursive;
+			color: rgb(173, 173, 173);
+			text-align: center;
+			
+		  }
+
+		  .card a{
+			font-family: cursive;
+			background-color: rgb(81, 147, 125);
+			padding: 5px;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			font-weight: 400;
+			border-radius: 10px;
+			position: absolute;
+			top: 90%;
+
+		  }
+		  
+		  .description{
+			border-radius: 5px;
+			padding: 10px;
+			width: 86%;
+			border: 0.5px solid rgb(219, 219, 219);
+			position: absolute;
+			top: 70%;
+		  }
+		.description p{
+			text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+			color: rgb(147, 147, 147);
+
+		}
+
+		  /* DASHBORD CARD*/
+        .title{
+			font-family: cursive;
+			color: rgb(26, 119, 49);
+			text-align: center;
+			
+		}
+
+		  .Button{
+			font-family: cursive;
+			background-color: rgb(81, 147, 125);
+			padding: 5px;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			font-weight: 400;
+			border-radius: 10px;
+		  }
+		  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+			td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			background-color: #dddddd;
+			}
+ /* ADD PRODUCT*/
+			.create {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.create input {
+				width: 50%;
+				padding: 5px;
+				height: 4vh;
+				margin-top: 5px;
+				border-radius: 5px;
+			}
+
+			.create button {
+				width: 50%;
+				background-color: #46af6d;
+				color:#dddddd;
+				padding: 10px;
+				border-radius: 5px;
+				font-family: cursive;
+				font-weight: 700;
+				margin: 5px;
+
+			}
+		
+		</style>
+	</head>
+	<body>
+			<header class="menu">
+				<nav>
+					<a class="Button-hover" href="http://localhost/crud/">Home</a> |
+					<a class="Button-hover"href="http://localhost/crud/?page=sobre">Sobre</a>
+					<a class="Button-hover"href="http://localhost/crud/?page=admin&method=index" class="flutuacao-dir">Dashbord</a>
+				</nav>
+			</header>
+
+		<div class="screen-full">
+			<div id="conteudo">
+				{{root}}
+			</div>
+		</div>
+	</body>
+</html>
+
+
+

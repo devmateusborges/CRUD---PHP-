@@ -1,0 +1,20 @@
+				<div class="search">
+					<form action="?page=home&method=index" method="post">
+						<input name="search" type="text" placeholder="Search">
+						<button type="submit">Search</button>
+					</form>
+				</div>
+				<div class="grid-sistem">
+					{% for product in products %}
+						<div class="card">
+								<h2 >{{product.name}}</h2>
+								<p>{{product.amount}}</p>
+							<div class="description">
+							<p >{{product.describe}}</p>
+							</div>
+
+							<a href="http://localhost/crud/?page=product&id={{product.id_product}}">Detalhes</a>
+						</div>
+					{% endfor %}
+
+				</div>

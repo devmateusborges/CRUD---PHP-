@@ -1,0 +1,25 @@
+<h1 class="title">Gerenciador Produto</h1>
+
+
+<a class="Button" href="http://localhost/crud/?page=admin&method=create">Novo Produto</a>
+
+<hr>
+<br><table >
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Update</th>
+		<th>Delete</th>
+	</tr>
+
+
+	{% for product in products %}
+	<tr>
+		<th>{{product.id_product}}</th>
+		<th>{{product.name}}</th>
+		<th><a href="http://localhost/crud/?page=admin&method=change&id={{product.id_product}}">update</a></th>
+		<th><a href="http://localhost/crud/?page=admin&method=delete&id={{product.id_product}}">Delete</a></th>
+	</tr>
+	{% endfor %}
+
+</table>
